@@ -1,0 +1,15 @@
+Q1: echo 'task: practice git' >> notes.md && git add notes.md && git commit -m 'ws2: add task line'
+Q2: git log --oneline -3
+Q3: git log --oneline -3 | short hash: c5c5a91
+Q4: git revert c5c5a91 --no-edit | confirmed WRONG line removed via cat notes.md
+Q5: git rm --cached bigdata.bin && echo 'bigdata.bin' >> .gitignore && git add .gitignore && git commit --amend --no-edit && git push && rm bigdata.bin
+Q6: git switch -c feature-summary
+Q7: echo '# Summary' > summary.md && echo 'First draft of the summary.' >> summary.md && git add summary.md && git commit -m 'ws2: add summary'
+Q8: git diff main feature-summary
+Q9: git switch main && git merge feature-summary | confirmed via ls that summary.md exists on main
+Q10: git branch -d feature-summary
+Q11: git merge conflict-branch | CONFLICT in ws2/summary.md
+Q12: git status | shows summary.md as both modified under Unmerged paths
+Q14: git add summary.md && git commit | merge completed successfully
+Q15: git fetch origin && git log HEAD..origin/main --oneline | no output, local is ahead of remote
+Q16: git fetch downloads remote changes without merging them into your branch, while git pull does a fetch and immediately merges those changes into your current branch.
